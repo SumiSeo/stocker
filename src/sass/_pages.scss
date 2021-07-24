@@ -1,0 +1,41 @@
+@import "./base";
+
+.main {
+  margin: 0 auto;
+  font-family: "Nunito", sans-serif;
+  width: 80vw;
+  height: 100vh;
+  margin-top: 2rem;
+  // border: 3px solid $grey;
+}
+
+// .header {
+// }
+
+// .main__container {
+// }
+
+.header__container {
+  height: 3rem;
+}
+.header__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+}
+
+.header__link a:link,
+.header__link a:visited {
+  color: $grey;
+  font-size: 1rem;
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.header__link--title a:link {
+  font-size: 1.4rem;
+  font-weight: 400;
+}

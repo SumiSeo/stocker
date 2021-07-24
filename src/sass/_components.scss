@@ -1,0 +1,39 @@
+@import "./base";
+
+.searchForm {
+  margin-top: 2rem;
+}
+
+.searchInput {
+  padding: 0.8rem 8rem;
+  outline: none;
+  border: 2px solid $grey;
+  border-radius: 13px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: $grey;
+  margin-right: 2px;
+}
+
+.searchInput::placeholder {
+  font-family: inherit;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.searchButton {
+  padding: 0.8rem;
+  border: 2px solid $grey;
+  background-color: white;
+  border-radius: 13px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  margin-left: 0.3rem;
+}
+
+.searchButton:hover,
+.searchButton:focus {
+  background-color: $green;
+}
