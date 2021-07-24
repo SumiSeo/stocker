@@ -7,9 +7,9 @@
 .searchInput {
   padding: 0.8rem 8rem;
   outline: none;
-  border: 2px solid $grey;
-  border-radius: 13px;
-  font-family: inherit;
+  border: 1.8px solid $grey;
+  border-radius: 10px;
+  font-family: "Quicksand", sans-serif;
   font-size: 1rem;
   color: $grey;
   margin-right: 2px;
@@ -23,10 +23,10 @@
 
 .searchButton {
   padding: 0.8rem;
-  border: 2px solid $grey;
+  border: 1.8px solid $grey;
   background-color: white;
-  border-radius: 13px;
-  font-family: inherit;
+  border-radius: 10px;
+  font-family: "Quicksand", sans-serif;
   font-size: 1rem;
   transition: all 0.3s ease-in-out;
   outline: none;
@@ -36,4 +36,17 @@
 .searchButton:hover,
 .searchButton:focus {
   background-color: $green;
+}
+
+.image__list {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: 10px;
+  grid-gap: 0 1rem;
+}
+
+.image__list img {
+  width: 250px;
+  grid-row-end: span 4;
 }
