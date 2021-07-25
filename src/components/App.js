@@ -3,15 +3,29 @@ import main from "../sass/main.scss";
 import Photo from "./Photo";
 import Unsplash from "../api/Unsplash";
 import ImageList from "./ImageList";
+import VideoSearch from "./VideoSearch";
+import youtube from "../api/Youtube";
 
 class App extends React.Component{
     state = { images: []};
+    state = { videos: []};
+
     onSearchSubmit= async(term) => {
        const response =  await Unsplash.get("/search/photos", {
             params: {query: term},
         });
     this.setState({images:response.data.results});
     }
+
+    onTermSubmit = async (term) => {
+         const response = await youtube.get("/search", {
+            params: {
+                q:term
+            }
+        });
+        this.setState({videos:response.data.items })
+    };
+
 
 
     render(){
@@ -30,8 +44,10 @@ class App extends React.Component{
                 </header>
                 <main >
                     <div className="main__container">
-                        <Photo onSearchSubmit={this.onSearchSubmit}/>
-                        <ImageList images={this.state.images}/>
+                         {/* <Photo onSearchSubmit={this.onSearchSubmit}/> */}
+                        {/* <ImageList images={this.state.images}/> */}
+                        <VideoSearch onTermSubmit={this.onTermSubmit}/>
+
                     </div>
                 </main>
             </div>

@@ -1,4 +1,6 @@
 import React from "react";
+// import main from "../sass/main.scss";
+
 
 class ImageCard extends React.Component{
     constructor(props) {
@@ -12,14 +14,14 @@ class ImageCard extends React.Component{
     }
     setSpans=()=>{
         const height = this.imageRef.current.clientHeight;
-        const spans = Math.ceil(height / 10 );
+        const spans = Math.ceil(height / 10 )+1;
         this.setState({spans});
     }
    
     render(){ 
         const {description, urls } = this.props.image;
         return(
-            <div style={{gridRowEnd: `span ${this.state.spans}`}}>
+            <div className="imgs" style={{gridRowEnd: `span ${this.state.spans}`}}>
                 <img
                 ref ={this.imageRef} 
                 alt={description} 

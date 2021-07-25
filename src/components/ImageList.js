@@ -1,5 +1,7 @@
+
 import React from "react";
 import ImageCard from "./ImageCard";
+// import main from "../sass/main.scss";
 
 
 const ImageList = (props)=>{
