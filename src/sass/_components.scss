@@ -54,3 +54,51 @@
 // .imgs img{
 //   margin-top: 2rem;
 // }
+
+.videoBox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid $grey;
+
+  &:hover {
+    border-bottom: 1px solid $green;
+  }
+}
+
+.videoImg {
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+.videoImg img {
+  max-width: 180px;
+}
+
+.videoTitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: $grey;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+.videoInfo {
+  color: $grey;
+  font-size: 0.8rem;
+}
+
+.detailHeader {
+  font-size: 1.3rem;
+  color: $green;
+  margin: 1rem 0;
+}
+.detailDes {
+  font-size: 0.9rem;
+  color: $grey;
+}
+
+iframe {
+  width: 600px;
+  height: 400px;
+}

@@ -7,6 +7,7 @@ class VideoSearch extends React.Component{
         this.setState({term:e.target.value});
     };
     onFormSubmit=(e)=>{
+        e.preventDefault();
         this.props.onTermSubmit(this.state.term);
         //Todo: Make sure we call callback from parent components
     };
@@ -16,7 +17,6 @@ class VideoSearch extends React.Component{
                 <div className="searchContainer">
                     <form 
                     onSubmit={this.onFormSubmit}
-                    
                     className="searchForm">
                         <input 
                         value={this.state.term}
