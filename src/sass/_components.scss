@@ -102,3 +102,20 @@ iframe {
   width: 600px;
   height: 400px;
 }
+
+.accordionTitle {
+  color: $grey;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.accordionContent {
+  font-size: 1rem;
+  color: $grey;
+  margin-bottom: 2rem;
+}
+
+.accordionTitle i {
+  width: 3rem;
+  text-align: center;
+}

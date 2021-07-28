@@ -7,6 +7,28 @@ import VideoSearch from "./VideoSearch";
 import youtube from "../api/Youtube";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
+import Accordion from "./Accordion";
+
+
+const items = [
+    { 
+      title : "About Stocker",
+      content : "React is a frond-end javascript framework",
+      icon :"fas fa-cubes"
+    },
+    {
+      title : "About Developer",
+      content : "React is a favorite JS library among engineers",
+      icon:"fas fa-child"
+    },
+    { 
+      title : "About tech stacks",
+      content : "You use React by creating components",
+      icon: "fas fa-laptop-code"
+    },
+
+]
+
 
 
 class App extends React.Component{
@@ -56,13 +78,15 @@ class App extends React.Component{
                 </header>
                 <main >
                     <div className="main__container">
-
+                        {/* <Photo onSearchSubmit={this.onSearchSubmit}/>
+                        <ImageList images={this.state.images}/>
+                         */}
                         <VideoSearch onTermSubmit={this.onTermSubmit}/>
 
                         <div className="main__column">
-                        <div className="main__box"><VideoDetail video={this.state.selectedVideo}/></div>
-                        <div className="main__box"> <VideoList videos={this.state.videos} onVideoSelect={this.onVideoSelect}/></div>
-                       
+                        {/* <div className="main__box"><VideoDetail video={this.state.selectedVideo}/></div>
+                        <div className="main__box"> <VideoList videos={this.state.videos} onVideoSelect={this.onVideoSelect}/></div> */}
+                        <Accordion items={items}/>
                         </div>
                     </div>
                 </main>
