@@ -33,13 +33,14 @@ main {
   font-size: 1rem;
   text-decoration: none;
   font-family: "Quicksand", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
 .header__link--title a:link {
   font-size: 1.4rem;
   font-weight: 400;
+  font-style: italic;
 }
 
 .main__column {
@@ -48,4 +49,10 @@ main {
   margin-top: 3rem;
   gap: 1rem;
   align-items: flex-start;
+}
+
+.accordion {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

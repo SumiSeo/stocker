@@ -14,7 +14,7 @@ const items = [
     { 
       title : "About Stocker",
       content : "React is a frond-end javascript framework",
-      icon :"fas fa-cubes"
+      icon :"fas fa-laptop-code" 
     },
     {
       title : "About Developer",
@@ -22,9 +22,9 @@ const items = [
       icon:"fas fa-child"
     },
     { 
-      title : "About tech stacks",
+      title : "About Stacks",
       content : "You use React by creating components",
-      icon: "fas fa-laptop-code"
+      icon: "fas fa-cubes"
     },
 
 ]
@@ -86,8 +86,9 @@ class App extends React.Component{
                         <div className="main__column">
                         {/* <div className="main__box"><VideoDetail video={this.state.selectedVideo}/></div>
                         <div className="main__box"> <VideoList videos={this.state.videos} onVideoSelect={this.onVideoSelect}/></div> */}
-                        <Accordion items={items}/>
+                      
                         </div>
+                        <Accordion items={items}/>
                     </div>
                 </main>
             </div>
