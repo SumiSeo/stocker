@@ -27,8 +27,7 @@ main {
   height: 3rem;
 }
 
-.header__link a:link,
-.header__link a:visited {
+.header__link {
   color: $grey;
   font-size: 1rem;
   text-decoration: none;
@@ -37,7 +36,7 @@ main {
   text-transform: uppercase;
 }
 
-.header__link--title a:link {
+.header__link--title {
   font-size: 1.4rem;
   font-weight: 400;
   font-style: italic;

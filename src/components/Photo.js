@@ -1,29 +1,23 @@
-import React from "react";
+import React,{useState} from "react";
 // import main from "../sass/main.scss";
 
   
 
-
-
-class Photo extends React.Component  {
-    state = {term:""};
-    onFormSubmit=(e)=>{
+const Photo = ({onSearchSubmit})=>{
+    const [term, setTerm] = useState("");
+    const  onFormSubmit=(e)=>{
         e.preventDefault();
-        this.props.onSearchSubmit(this.state.term);
+        onSearchSubmit(term);
     }
-        
-    
-
-    render(){
-        return(
+    return(
         <div>
             <div className="searchContainer">
                 <form 
-                onSubmit={this.onFormSubmit}
+                onSubmit={onFormSubmit}
                 className="searchForm">
                     <input
-                     value={this.state.term}
-                     onChange={(e)=>{this.setState({term:e.target.value})}}
+                     value={term}
+                     onChange={(e)=>{setTerm(e.target.value)}}
                      type="text" 
                      className="searchInput"/>
                     <button className="searchButton">Search</button>
@@ -32,9 +26,9 @@ class Photo extends React.Component  {
         </div>
             
         )
-    }
+};
 
-}
+
 
 
 // const Photo = () => {
