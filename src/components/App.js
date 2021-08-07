@@ -9,6 +9,7 @@ import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 import Accordion from "./Accordion";
 import Route from "./Route";
+import Header from "./Header";
 
 
 const items = [
@@ -67,17 +68,7 @@ const App = () => {
     return (
         
         <div>
-            <header className="header">
-                <nav className="header__container">
-                    <ul className="header__links">
-                        <li className="header__link">Photo</li>
-                        <li className="header__link">Video</li>
-                        <li className="header__link header__link--title">Stocker</li>
-                        <li className="header__link">About</li>
-                        <li className="header__link">Contact</li>
-                        </ul>
-                    </nav>
-            </header>
+            <Header/>
             <Route path="/">
                 <Photo onSearchSubmit={onSearchSubmit}/>
                 <ImageList images={images}/>
