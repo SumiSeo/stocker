@@ -8,6 +8,7 @@ import youtube from "../api/Youtube";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 import Accordion from "./Accordion";
+import Route from "./Route";
 
 
 const items = [
@@ -64,40 +65,33 @@ const App = () => {
     
 
     return (
-        <div className="main">
+        
+        <div>
             <header className="header">
-            <nav className="header__container">
-                <ul className="header__links">
-                    <li className="header__link">Photo</li>
-                    <li className="header__link">Video</li>
-                    <li className="header__link header__link--title">Stocker</li>
-                    <li className="header__link">About</li>
-                    <li className="header__link">Contact</li>
-                </ul>
-            </nav>
+                <nav className="header__container">
+                    <ul className="header__links">
+                        <li className="header__link">Photo</li>
+                        <li className="header__link">Video</li>
+                        <li className="header__link header__link--title">Stocker</li>
+                        <li className="header__link">About</li>
+                        <li className="header__link">Contact</li>
+                        </ul>
+                    </nav>
             </header>
-            <main >
-                <div className="main__container">
-                <div>
-                    <Photo onSearchSubmit={onSearchSubmit}/>
-                    <ImageList images={images}/>
-                </div>
-                <div>
-                    <VideoSearch onTermSubmit={onTermSubmit}/>
-                    <div className="main__box">
-                    <VideoDetail video={selectedVideo}/></div>
-                    <div className="main__box"> 
-                    < VideoList 
-                    videos={videos} 
-                    onVideoSelect={(video)=>setSelectedVideo(video)}/>
-                    </div> 
-                </div>
-                <div>
-                    <Accordion items={items}/>;
-                </div>
-
-                </div>
-            </main>
+            <Route path="/">
+                <Photo onSearchSubmit={onSearchSubmit}/>
+                <ImageList images={images}/>
+            </Route>
+            <Route path="/video">
+                <VideoSearch onTermSubmit={onTermSubmit}/>
+                <VideoDetail video={selectedVideo}/>
+                <VideoList 
+                videos={videos} 
+                onVideoSelect={(video)=>setSelectedVideo(video)}/>
+            </Route>
+            <Route path="/accordion">
+                <Accordion items={items}/>
+            </Route>
         </div>
 
     )

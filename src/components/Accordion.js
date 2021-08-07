@@ -10,7 +10,6 @@ const Accordion =({items})=>{
         return (
             <div onClick={()=>{onTitleClick(index)}} className="accordionBox" key={item.title}>
                 <div 
-                
                 className={`accordionTitle ${active}`}>
                     <i className={item.icon}></i>
                     <span>{item.title}</span>
