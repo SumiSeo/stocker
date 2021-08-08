@@ -47,7 +47,9 @@ const App = () => {
 
     const onSearchSubmit= async(term) => {
         const response =  await Unsplash.get("/search/photos", {
-             params: {query: term},
+             params: {
+                 query: term,
+                 per_page: 30},
          });
      setImages(response.data.results);
 
