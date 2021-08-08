@@ -1,25 +1,12 @@
 @import "./base";
 
-.main {
-  margin: 0 auto;
-
-  width: 80vw;
-  height: 100vh;
-  margin-top: 3rem;
-  // border: 3px solid $grey;
-}
-
 main {
-  width: 80vw;
-}
-.main__container {
-  width: 100%;
+  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.header__container {
-  width: 100%;
-  height: 3rem;
-}
 .header__links {
   display: flex;
   justify-content: space-between;
@@ -27,7 +14,8 @@ main {
   height: 3rem;
 }
 
-.header__link {
+.header__link a:link,
+.header__link a:visited {
   color: $grey;
   font-size: 1rem;
   text-decoration: none;
@@ -36,10 +24,33 @@ main {
   text-transform: uppercase;
 }
 
-.header__link--title {
+.header__link--photo {
+  position: absolute;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  bottom: 3rem;
+}
+.header__link--about {
+  position: absolute;
+  writing-mode: vertical-lr;
+  right: 3rem;
+  top: 3rem;
+}
+.header__link--contact {
+  position: absolute;
+  writing-mode: vertical-lr;
+  right: 3rem;
+  bottom: 3rem;
+  &:hover {
+    color: red;
+  }
+}
+.header__link--title a:link,
+.header__link--title a:visited {
   font-size: 1.4rem;
   font-weight: 400;
   font-style: italic;
+  color: $grey;
 }
 
 .main__column {

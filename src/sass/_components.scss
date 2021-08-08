@@ -2,17 +2,20 @@
 
 .searchForm {
   margin-top: 2rem;
+  margin-left: 3rem;
 }
 
 .searchInput {
   padding: 0.8rem 8rem;
   outline: none;
-  border: 1.8px solid $grey;
+  border: none;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   font-family: "Quicksand", sans-serif;
   font-size: 1rem;
   color: $grey;
   margin-right: 2px;
+  background-color: #78e08f;
 }
 
 .searchInput::placeholder {
@@ -23,8 +26,8 @@
 
 .searchButton {
   padding: 0.8rem;
-  border: 1.8px solid $grey;
-  background-color: white;
+  background-color: #60a3bc;
+  border: none;
   border-radius: 10px;
   font-family: "Quicksand", sans-serif;
   font-size: 1rem;
@@ -39,6 +42,7 @@
 }
 
 .image__list {
+  margin-left: 3rem;
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 400px);

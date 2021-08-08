@@ -68,21 +68,27 @@ const App = () => {
     return (
         
         <div>
-            <Header/>
-            <Route path="/">
-                <Photo onSearchSubmit={onSearchSubmit}/>
-                <ImageList images={images}/>
-            </Route>
-            <Route path="/video">
-                <VideoSearch onTermSubmit={onTermSubmit}/>
-                <VideoDetail video={selectedVideo}/>
-                <VideoList 
-                videos={videos} 
-                onVideoSelect={(video)=>setSelectedVideo(video)}/>
-            </Route>
-            <Route path="/accordion">
-                <Accordion items={items}/>
-            </Route>
+            <main>
+                <Header/>
+                <Route path="/video">
+                    <VideoSearch onTermSubmit={onTermSubmit}/>
+                    <VideoDetail video={selectedVideo}/>
+                    <VideoList 
+                    videos={videos} 
+                    onVideoSelect={(video)=>setSelectedVideo(video)}/>
+                </Route>
+                <Route path="/">
+                    <Photo onSearchSubmit={onSearchSubmit}/>
+                    <ImageList images={images}/>
+                </Route>
+                <Route path="/photo">
+                    <Photo onSearchSubmit={onSearchSubmit}/>
+                    <ImageList images={images}/>
+                </Route>
+                <Route path="/accordion">
+                    <Accordion items={items}/>
+                </Route>    
+            </main>
         </div>
 
     )
