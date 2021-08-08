@@ -87,7 +87,7 @@ const App = () => {
                     <Photo onSearchSubmit={onSearchSubmit}/>
                     <ImageList images={images}/>
                 </Route>
-                <Route path="/accordion">
+                <Route path="/about">
                     <Accordion items={items}/>
                 </Route>    
             </main>

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "./Link";
 
 const Header = () =>{
     return(
@@ -6,10 +7,10 @@ const Header = () =>{
                 <nav className="header__container">
                     <ul className="header__links">
                         {/* <li className="header__link">Video</li> */}
-                        <li className="header__link header__link--photo"><a href="/photo">Photo</a></li>
-                        <li className="header__link header__link--title"><a href="/">Stocker</a></li>
-                        <li className="header__link header__link--about"><a href="/accordion">About</a></li>
-                        <li className="header__link header__link--contact"><a href="mailto:qkobr94@gmail.com">Contact</a></li>
+                        <li className="header__link header__link--photo"><Link href="/photo">Photo</Link></li>
+                        <li className="header__link header__link--title"><Link href="/">Stocker</Link></li>
+                        <li className="header__link header__link--about"><Link href="/about">About</Link></li>
+                        <li className="header__link header__link--contact"><Link href="mailto:qkobr94@gmail.com">Contact</Link></li>
                     </ul>
                 </nav>
          </header>
