@@ -2,7 +2,7 @@
 
 .searchForm {
   margin-top: 2rem;
-  margin-left: 3.5rem;
+  margin-left: 3rem;
 }
 
 .searchInput {
@@ -13,9 +13,15 @@
   border-radius: 10px;
   font-family: "Quicksand", sans-serif;
   font-size: 1rem;
-  color: $grey;
+  color: white;
   margin-right: 2px;
-  background-color: #78e08f;
+  background-color: #30336b;
+  @media screen and (max-width: 700px) {
+    padding: 0.8rem 6rem;
+  }
+  @media screen and (max-width: 600px) {
+    padding: 0.8rem 4rem;
+  }
 }
 
 .searchInput::placeholder {
@@ -42,10 +48,10 @@
 }
 
 .image__list {
-  margin-left: 3.5rem;
+  margin-left: 3rem;
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(3, 400px);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 400px));
   grid-auto-rows: 10px;
   grid-gap: 0 0.6rem;
 }
@@ -53,6 +59,7 @@
 .image__list img {
   width: 400px;
   grid-row-end: span 4;
+
   // margin-top: 1rem;
 }
 // .imgs img{
@@ -108,17 +115,24 @@ iframe {
 }
 
 .accordionContainer {
+  margin-top: 4rem;
   border: 2px solid $grey;
   border-radius: 10px;
-  padding: 2rem;
+  padding: 2rem 1rem;
   width: 50rem;
   height: 45vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and(max-width:800px) {
+    width: 40rem;
+  }
+  @media screen and(max-width:650px) {
+    width: 30rem;
+  }
 }
 .accordionBox {
-  width: 80%;
+  width: 40rem;
   border: 2px solid $grey;
   border-radius: 10px;
   margin-bottom: 1rem;
@@ -126,12 +140,17 @@ iframe {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   transition: all 0.2s ease-in-out;
   padding: 2rem 0;
   &:hover {
-    background-color: $yellow;
+    background-color: #d6a2e8;
     padding: 3rem 0;
+  }
+  @media screen and(max-width:800px) {
+    width: 35rem;
+  }
+  @media screen and(max-width:650px) {
+    width: 25rem;
   }
 }
 .accordionTitle {
@@ -139,18 +158,27 @@ iframe {
   font-size: 1.4rem;
   margin: 0.5rem 0;
   margin-left: 1rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
   i {
     margin-right: 2rem;
+  }
+  @media screen and(max-width:800px) {
+    font-size: 1.3rem;
+  }
+  @media screen and(max-width:650px) {
+    font-size: 1.1rem;
   }
 }
 
 .accordionContent {
   font-size: 1rem;
   color: $grey;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-left: 6rem;
   display: none;
+  @media screen and(max-width:650px) {
+    font-size: 0.9rem;
+  }
 }
 
 .accordionTitle i {

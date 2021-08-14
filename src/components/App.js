@@ -15,17 +15,17 @@ import Header from "./Header";
 const items = [
     { 
       title : "About Stocker",
-      content : "React is a frond-end javascript framework",
+      content : "With this applicatioin, you can find chunk of pictures whole over the world!",
       icon :"fas fa-laptop-code" 
     },
     {
       title : "About Developer",
-      content : "React is a favorite JS library among engineers",
+      content : "I am full-stack developer who loves building websites by using HTML, CSS, JS, and React.",
       icon:"fas fa-child"
     },
     { 
       title : "About Stacks",
-      content : "You use React by creating components",
+      content : 'To lay out "Stocker", I used predominantly React-Hooks system.',
       icon: "fas fa-cubes"
     },
 

@@ -24,7 +24,7 @@ main {
   text-transform: uppercase;
   transition: all 0.2s ease-in;
   &:hover {
-    color: #ffb142;
+    color: #3b3b98;
   }
 }
 
@@ -39,7 +39,7 @@ main {
   position: absolute;
   writing-mode: vertical-lr;
   right: 3rem;
-  top: 3rem;
+  top: 2rem;
   position: fixed;
 }
 .header__link--contact {
